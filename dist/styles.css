@@ -12,7 +12,6 @@ body {
   border-radius: 4px;
   background: #125dff;
   font-size: 30px;
-  min-width: 800px;
 }
 
 .choice-container:hover {
@@ -78,15 +77,34 @@ body {
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
+  h1 {
+    text-align: center;
+  }
   div#game {
-    width: 70%;
+    width: 100%;
   }
   h1#question {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
   }
   div.choice-container {
-    width: 50%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 478px) {
+  h1#question {
+    font-size: 1.5rem;
+  }
+  h1#score {
+    font-size: 3.5rem;
+  }
+  div.choice-container {
+    height: 60px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.5rem;
   }
 }
 
