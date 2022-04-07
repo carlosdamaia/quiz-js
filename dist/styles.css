@@ -12,6 +12,7 @@ body {
   border-radius: 4px;
   background: #125dff;
   font-size: 30px;
+  min-width: 800px;
 }
 
 .choice-container:hover {
@@ -74,6 +75,8 @@ body {
   height: 100%;
   background: #0bdf24;
   width: 0%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
@@ -105,6 +108,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     font-size: 1.5rem;
+    min-width: auto;
   }
 }
 
@@ -199,7 +203,7 @@ body {
 }
 
 h1 {
-  font-size: 54px;
+  font-size: 50px;
   color: #fff;
   margin-bottom: 50px;
 }

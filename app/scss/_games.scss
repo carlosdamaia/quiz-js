@@ -9,7 +9,7 @@ body {
     border-radius: 4px;
     background: rgb(18, 93, 255);
     font-size: 30px;
-    //min-width: 800px;
+    min-width: 800px;
 }
 
 .choice-container:hover {
@@ -66,6 +66,7 @@ body {
     height: 100%;
     background: rgb(11, 223, 36);
     width: 0%;
+    transition: 1s;
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
@@ -100,5 +101,6 @@ body {
         height: 60px;
         align-items: center;
         font-size: 1.5rem;
+        min-width: auto;
     }
 }
