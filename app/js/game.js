@@ -3,6 +3,10 @@ const choices = Array.from(document.querySelectorAll('.choice-text')); // Array 
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
+const opcao1 = document.querySelector('#opcao-1');
+const opcao2 = document.querySelector('#opcao-2');
+const opcao3 = document.querySelector('#opcao-3');
+const opcao4 = document.querySelector('#opcao-4');
 
 let currentQuestion = {}
 let acceptingAnswers = true
@@ -226,6 +230,12 @@ startGame = () => {
 }
 
 getNewQuestion = () => { // Buscar nova pergunta
+    
+    opcao1.checked = false;
+    opcao2.checked = false;
+    opcao3.checked = false;
+    opcao4.checked = false;
+
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score) // Adiciona a pontuação para armazenamento
 
@@ -234,8 +244,9 @@ getNewQuestion = () => { // Buscar nova pergunta
 
     // Adiciona +1 no contador de perguntas
     // Barra de progresso é preenchida conforme o contador aumenta
+
     questionCounter++
-    progressText.innerText = `Questão ${questionCounter} de ${MAX_QUESTIONS}`
+    progressText.innerText = `${questionCounter} / ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
     
     //const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
@@ -249,12 +260,14 @@ getNewQuestion = () => { // Buscar nova pergunta
     })
 
     availableQuestions.splice(questionsIndex, 1)
-
+    
     acceptingAnswers = true
 
     if(questionsIndex > 0) {
         questionsIndex++
     }
+
+    
 }
 
 
@@ -272,6 +285,8 @@ choices.forEach(choice => {
         if(classToApply === selectedAnswer) {
             incrementScore(SCORE_POINTS)
         }
+
+        
 
         //selectedChoice.parentElement.classList.add(classToApply)
 

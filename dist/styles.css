@@ -3,6 +3,10 @@ body {
   color: #fff;
 }
 
+#question {
+  text-align: center;
+}
+
 .choice-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,6 +17,16 @@ body {
   background: #ff6600;
   font-size: 30px;
   min-width: 800px;
+}
+
+.opcao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 20px;
+  margin: 0;
 }
 
 .choice-container:hover {
@@ -56,6 +70,10 @@ body {
 .hud-prefix {
   text-align: center;
   font-size: 20px;
+  background-color: #ff6600;
+  width: 50%;
+  border-radius: 30px;
+  padding: 10px;
 }
 
 .hud-main-text {
