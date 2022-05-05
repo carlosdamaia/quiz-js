@@ -7,7 +7,9 @@ const opcao1 = document.querySelector('#opcao-1');
 const opcao2 = document.querySelector('#opcao-2');
 const opcao3 = document.querySelector('#opcao-3');
 const opcao4 = document.querySelector('#opcao-4');
+const proximoBtn = document.querySelector('#proximo-btn');
 
+var opcoes = [opcao1, opcao2, opcao3, opcao4]
 let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
@@ -220,7 +222,7 @@ let questions = [
 const SCORE_POINTS = 25 // Pontos recebidos por pergunta certa
 const MAX_QUESTIONS = 25 // Máximo de perguntas
 
-//console.log(questions[1])
+
 
 startGame = () => {
     questionCounter = 0
@@ -229,7 +231,20 @@ startGame = () => {
     getNewQuestion()
 }
 
+acceptAnswer = () => {
+    proximoBtn.addEventListener("click", function(event){
+        event.preventDefault()
+
+        acceptingAnswers = true
+
+        getNewQuestion()
+        
+    });
+}
+
 getNewQuestion = () => { // Buscar nova pergunta
+
+    acceptingAnswers = false;
     
     opcao1.checked = false;
     opcao2.checked = false;
@@ -246,8 +261,9 @@ getNewQuestion = () => { // Buscar nova pergunta
     // Barra de progresso é preenchida conforme o contador aumenta
 
     questionCounter++
+    console.log(questionCounter)
     progressText.innerText = `${questionCounter} / ${MAX_QUESTIONS}`
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    //progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
     
     //const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     const questionsIndex = 0
@@ -261,7 +277,8 @@ getNewQuestion = () => { // Buscar nova pergunta
 
     availableQuestions.splice(questionsIndex, 1)
     
-    acceptingAnswers = true
+    //acceptingAnswers = true
+    acceptAnswer()
 
     if(questionsIndex > 0) {
         questionsIndex++
@@ -300,7 +317,10 @@ choices.forEach(choice => {
 
 incrementScore = num => {
     score +=num
-    scoreText.innerText = score
+    //scoreText.innerText = score
 }
 
+
+
 startGame()
+//

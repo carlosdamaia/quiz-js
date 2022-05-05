@@ -9,6 +9,10 @@
     <title>Play the Game</title>
 </head>
 <body>
+    <header>
+        <a href="/logout.jsp" class="botoes-header">Voltar</a>
+        <a href="/logout.jsp" class="botoes-header">Sair</a>
+    </header>
     <div class="container">
         <div id="game" class="justify-center flex-column">
             <div id="hud">
@@ -16,10 +20,13 @@
                     <p id="progressText" class="hud-prefix">
                         Questão
                     </p>
+                    <!--
                     <div id="progressBar">
                         <div id="progressBarFull"></div>
                     </div>
+                    -->
                 </div>
+                <!--
                 <div class="hud-item">
                     <p class="hud-prefix">
                         Score
@@ -28,43 +35,47 @@
                         0
                     </h1>
                 </div>
+                -->
             </div>
 
             <form>
-                <h1 id="question">What is the answer to this question?</h1>
-                <div class="choice-container">
-                    <!--<p class="choice-prefix">A</p>
-                    <p class="choice-text" data-number="1">Choice</p>
-                    -->
-                    <input class="opcao" type="radio" id="opcao-1">
-                    <label class="choice-text" data-number="1" for="opcao-1">Choice</label>
-                </div>
-                <div class="choice-container">
-                    <!--
-                    <p class="choice-prefix">B</p>
-                    <p class="choice-text" data-number="2">Choice</p>
-                    -->
-                    <input class="opcao" type="radio" id="opcao-2">
-                    <label class="choice-text" data-number="2" for="opcao-2">Choice</label>
-                </div>
-                <div class="choice-container">
-                    <!--
-                    <p class="choice-prefix">C</p>
-                    <p class="choice-text" data-number="3">Choice</p>
-                    -->
-                    <input class="opcao" type="radio" id="opcao-3">
-                    <label class="choice-text" data-number="3" for="opcao-3">Choice</label>
+                    <h1 id="question">What is the answer to this question?</h1>
+                    <div class="choice-container">
+                        <!--<p class="choice-prefix">A</p>
+                        <p class="choice-text" data-number="1">Choice</p>
+                        -->
+                        <input class="opcao" type="radio" id="opcao-1" name="caixa">
+                        <label class="choice-text" data-number="1" for="opcao-1">Choice</label>
+                    </div>
+                    <div class="choice-container">
+                        <!--
+                        <p class="choice-prefix">B</p>
+                        <p class="choice-text" data-number="2">Choice</p>
+                        -->
+                        <input class="opcao" type="radio" id="opcao-2" name="caixa">
+                        <label class="choice-text" data-number="2" for="opcao-2">Choice</label>
+                    </div>
+                    <div class="choice-container">
+                        <!--
+                        <p class="choice-prefix">C</p>
+                        <p class="choice-text" data-number="3">Choice</p>
+                        -->
+                        <input class="opcao" type="radio" id="opcao-3" name="caixa">
+                        <label class="choice-text" data-number="3" for="opcao-3">Choice</label>
 
-                </div>
-                <div class="choice-container">
-                    <!--
-                    <p class="choice-prefix">D</p>
-                    <p class="choice-text" data-number="4">Choice</p>
-                    -->
-                    <input class="opcao" type="radio" id="opcao-4">
-                    <label class="choice-text" data-number="4" for="opcao-4">Choice</label>
-                </div>
+                    </div>
+                    <div class="choice-container">
+                        <!--
+                        <p class="choice-prefix">D</p>
+                        <p class="choice-text" data-number="4">Choice</p>
+                        -->
+                        <input class="opcao" type="radio" id="opcao-4" name="caixa">
+                        <label class="choice-text" data-number="4" for="opcao-4">Choice</label>
+                    </div>
             <form>
+                <div class="proximo">
+                    <button id="proximo-btn">Próximo</button>
+                </div>
         </div>
     </div>
     <script src="/app/js/game.js"></script>
