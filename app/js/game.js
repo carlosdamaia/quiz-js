@@ -10,6 +10,8 @@ const opcao4 = document.querySelector('#opcao-4');
 const proximoBtn = document.querySelector('#proximo-btn');
 
 var opcoes = [opcao1, opcao2, opcao3, opcao4]
+var opcoesLength = opcoes.length
+var i = 0;
 let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
@@ -222,7 +224,7 @@ let questions = [
 const SCORE_POINTS = 25 // Pontos recebidos por pergunta certa
 const MAX_QUESTIONS = 25 // Máximo de perguntas
 
-
+console.log(opcoes.checked)
 
 startGame = () => {
     questionCounter = 0
@@ -231,20 +233,31 @@ startGame = () => {
     getNewQuestion()
 }
 
-acceptAnswer = () => {
+stopDefault = () => {
     proximoBtn.addEventListener("click", function(event){
-        event.preventDefault()
-
-        acceptingAnswers = true
-
-        getNewQuestion()
-        
+        event.preventDefault() 
     });
+}
+
+acceptAnswer = () => {
+    //proximoBtn.preventDefault()
+    acceptingAnswers = true
+    getNewQuestion()
+}
+
+enableDisable = () => {
+    
+    proximoBtn.disabled = !opcao1.checked
+    proximoBtn.disabled = !opcao2.checked
+    proximoBtn.disabled = !opcao3.checked
+    proximoBtn.disabled = !opcao4.checked
+    
 }
 
 getNewQuestion = () => { // Buscar nova pergunta
 
     acceptingAnswers = false;
+    //proximoBtn.disabled = true;
     
     opcao1.checked = false;
     opcao2.checked = false;
@@ -276,9 +289,26 @@ getNewQuestion = () => { // Buscar nova pergunta
     })
 
     availableQuestions.splice(questionsIndex, 1)
+
+    /*opcoes.forEach(function (item, index) {
+        if(item.checked == true) {
+            proximoBtn.disabled = false;
+        }
+        else {
+            proximoBtn.disabled = true;
+        }
+    });*/
+    
+    /*for (i; i < opcoesLength; i++) {
+        if(opcoes.checked) {
+            //proximoBtn.disabled = false;
+            console.log(opcoes[i])
+        }
+        
+    }*/
     
     //acceptingAnswers = true
-    acceptAnswer()
+    stopDefault()
 
     if(questionsIndex > 0) {
         questionsIndex++
@@ -303,8 +333,6 @@ choices.forEach(choice => {
             incrementScore(SCORE_POINTS)
         }
 
-        
-
         //selectedChoice.parentElement.classList.add(classToApply)
 
         setTimeout(() => {
@@ -319,8 +347,6 @@ incrementScore = num => {
     score +=num
     //scoreText.innerText = score
 }
-
-
 
 startGame()
 //
