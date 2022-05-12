@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/testeemocional.css">
+
+    <title>Teste: Perfil Emocional</title>
+</head>
+
+<body>
+    
+    <body>
+
+        <!--
+        <%
+            Statement statement = null;
+            ResultSet result = null;
+
+
+        %>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../../paginas/aluno/areaAluno.jsp"> <img id="logoStackX" src="../../img/stackx50.png"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../../paginas/aluno/areaAluno.jsp">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                </ul>        
+                <form class="form-inline my-2 my-lg-0">
+                    <span>
+                        <small class="mr-1">
+                            <%                                
+                                String nomeUsuario = (String) session.getAttribute("nomeUsuario");
+                                int idUsuario = (int) session.getAttribute("idUsuario");
+
+                                out.println(nomeUsuario);
+
+                                if (nomeUsuario == null) {
+                                    response.sendRedirect("../../paginas/aluno/loginAluno.jsp");
+                                }
+                            %>
+                        </small>
+                    </span>
+                    <a href="logout.jsp">  <i class="fas fa-sign-out-alt ml-1"></i> </a>
+                </form>
+
+            </div>
+        </nav>
+
+        <form class="container" method="POST"><br>
+
+            <legend class="h3">Perfil Emocional</legend><br>
+
+            <div class="border border-dark pl-3 pr-3 pt-3 areaPerguntas">
+                
+                <div class="mb-3 container">
+                    <label class="form-label h5">1. A sua saúde, o quanto ela representa de qualidade neste momento?</label>
+                    <p>De 0 a 3 - Tenho dependência de medicamentos para diversas situações médicas. <br> De 4 a 5 Uso esporadicamente medicamentos, pois a minha saúde está sob controle. <br> De 6 a 7 - Não uso medicamentos e nenhum tipo de droga (lícita ou ilícita). <br> De 8 a 10 - A minha saúde está 100%.</p>
+                    <div class="form-check form-check-inline">
+                        <P class="form-check-input pr-3">Não estou bem</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="peq1" value="0" >
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="peq1" value="1" >
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq1" value="2">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq1" value="3">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq1" value="4">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq1" value="5">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq1" value="6">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq1" value="7">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq1" value="8">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq1" value="9">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq1" value="10">
+                        </div>
+                        <P class="form-check-input">Eu me sinto ótimo</p>
+                    </div>
+                </div> 
+                
+                <div class="mb-3 container">
+                    <label class="form-label h5">2. Você ama o que faz?</label>
+                    <p>De 0 a 3 Ainda estou procurando algo que me desafie. <br> De 4 a 5 - Percebo o meu potencial mas não encontrei um lugar que os explore. <br> De 6 a 7 - Faço as minhas entregas e entendo que elas contribuem para a empresa. <br> De 8 a 10 - Não mudaria o que faço, mesmo que ficasse rico hoje.</p>
+                    <div class="form-check form-check-inline">
+                        <P class="form-check-input pr-3">Estou na procura</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="peq2" value="0" >
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="peq2" value="1" >
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq2" value="2">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq2" value="3">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq2" value="4">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq2" value="5">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq2" value="6">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq2" value="7">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq2" value="8">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq2" value="9">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq2" value="10">
+                        </div>
+                        <P class="form-check-input">Não troco por nada</p>
+                    </div>
+                </div> 
+                
+                <div class="mb-3 container">
+                    <label class="form-label h5">3. A sua família é um refúgio para você?</label>
+                    <p>De 0 a 3 - Infelizmente não há mais família para mim. <br> De 4 a 5 - Ainda tenho uma certa relação com os familiares. <br> De 6 a 7 - Tenho encontros frequentes com a minha família. <br> De 8 a 10 - A minha família está constantemente na minha vida.</p>
+                    <div class="form-check form-check-inline">
+                        <P class="form-check-input pr-3">Não tenho família</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="peq3" value="0" >
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="peq3" value="1" >
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq3" value="2">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq3" value="3">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq3" value="4">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq3" value="5">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq3" value="6">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq3" value="7">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq3" value="8">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq3" value="9">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq3" value="10">
+                        </div>
+                        <P class="form-check-input">Minha existência é por ela</p>
+                    </div>
+                </div>
+                
+                <div class="mb-3 container">
+                    <label class="form-label h5">4. O seus amigos estão atentos e próximos de você?</label>
+                    <p>De 0 a 3 - Atualmente só há conhecidos. <br> De 4 a 5 - Me restou apenas um amigo(a) mas não compartilho tudo com ele(a). <br> De 6 a 7 - Compartilho frequentemente a minha vida com um amigo(a). <br> De 8 a 10 - Tenho uma relação crescente com velhos e novos amigos.</p>
+                    <div class="form-check form-check-inline">
+                        <P class="form-check-input pr-3">Só tenho conhecidos</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="peq4" value="0" >
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="peq4" value="1" >
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq4" value="2">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq4" value="3">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq4" value="4">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq4" value="5">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq4" value="6">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq4" value="7">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq4" value="8">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq4" value="9">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq4" value="10">
+                        </div>
+                        <P class="form-check-input">Os tenho pertinho</p>
+                    </div>
+                </div>
+                
+                <div class="mb-3 container">
+                    <label class="form-label h5">5. A sua prosperidade financeira lhe garante uma subsistência por alguns meses/anos?</label>
+                    <p>De 0 a 3 - Pago 90% das contas e acabo precisando de mais dinheiro todo mês. <br> De 4 a 5 - Tenho conseguido pagar as contas mas não sobre nada. <br> De 6 a 7 - Pago as contas e consigo comprar algumas coisas a mais. <br> De 8 a 10 - Consigo realizar alguns investimentos todos os meses.</p>
+                    <div class="form-check form-check-inline">
+                        <P class="form-check-input pr-3">Estou sem dinheiro</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="peq5" value="0" >
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="peq5" value="1" >
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq5" value="2">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq5" value="3">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq5" value="4">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq5" value="5">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq5" value="6">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq5" value="7">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq5" value="8">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq5" value="9">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="peq5" value="10">
+                        </div>
+                        <P class="form-check-input">Tudo controlado</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-sm btn-danger mt-3 mb-3" name="bntEnviar">Enviar Teste</button>
+        </div>
+
+    </form>
+    
+    
+    <%
+        if (request.getParameter("bntEnviar") != null) {
+
+            String peq1 = request.getParameter("peq1");
+            String peq2 = request.getParameter("peq2");
+            String peq3 = request.getParameter("peq3");
+            String peq4 = request.getParameter("peq4");
+            String peq5 = request.getParameter("peq5");
+
+            int cpeq1 = Integer.parseInt(peq1);
+            int cpeq2 = Integer.parseInt(peq2);
+            int cpeq3 = Integer.parseInt(peq3);
+            int cpeq4 = Integer.parseInt(peq4);
+            int cpeq5 = Integer.parseInt(peq5);
+
+            int ie = (cpeq1 + cpeq2 + cpeq3 + cpeq4 + cpeq5)*2;
+
+            try {
+
+                statement = new Conexao().conectar().createStatement();
+                statement.executeUpdate("INSERT INTO perfilEmocional (idAluno, peq1, peq2, peq3,peq4,peq5,resultadoEmocional) VALUES ('" + idUsuario + "','" + peq1 + "','" + peq2 + "','" + peq3 + "','" + peq4 + "','" + peq5 + "','" + ie + "')");
+                statement.executeUpdate("UPDATE Alunos SET perfilEmocional = 'S' WHERE idAluno = '" + idUsuario + "'");
+                response.sendRedirect("../../paginas/aluno/areaAluno.jsp");
+
+            } catch (Exception e) {
+                //out.print(e);
+                e.printStackTrace();
+            }
+            response.sendRedirect("../../paginas/aluno/areaAluno.jsp");
+        }
+    %>
+    -->        
+
+<header>
+    <a href="/logout.jsp" class="botoes-header">Voltar</a>
+    <a href="/logout.jsp" class="botoes-header">Sair</a>
+</header>
+<div class="container">
+    <div id="game" class="justify-center flex-column">
+        <div id="hud">
+            <div class="hud-item">
+                <p id="progressText" class="hud-prefix">
+                    Questão
+                </p>
+            </div>
+        </div>
+
+        <form>
+                <h1 id="question">Qual é a resposta para essa pergunta?</h1>
+                <div class="choice-container">
+                    <label class="choice-text" data-number="1" for="opcao-1">Escolha</label>
+                </div>
+                <div class="choice-container">
+                    <label class="choice-text" data-number="2" for="opcao-2">Escolha</label>
+                </div>
+                <div class="choice-container">
+                    <label class="choice-text" data-number="3" for="opcao-3">Escolha</label>
+
+                </div>
+                <div class="choice-container">
+                    <label class="choice-text" data-number="4" for="opcao-4">Escolha</label>
+                </div>
+                <div class="container-opcoes">
+                    <div class="escolhas">
+                        <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                        <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                        <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                        <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                        <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                        <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                        <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                        <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                        <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                        <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                    </div>
+                    <div class="concordo-discordo">
+                        <label>Discordo</label>
+                        <label>Concordo</label>
+                    </div>
+                </div>
+        <form>
+            <div class="proximo">
+                <button id="proximo-btn" disabled="true" onclick="aceitarResposta()">Próximo</button>
+            </div>
+    </div>
+    </div>
+<script src="/app/js/testeEmocional.js"></script>
+
+</html>

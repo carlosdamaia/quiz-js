@@ -196,14 +196,6 @@ let perguntas = [
 
 const MAX_PERGUNTAS = 25;
 
-falaTagarela = () => {
-    if(opcao1.checked === true){
-        console.log('checado')
-    } else {
-        console.log('não checado')
-    }
-}
-
 iniciarJogo = () => {
     contadorPerguntas = 0
     perguntasDisponiveis = [...perguntas]
@@ -217,17 +209,21 @@ stopDefault = () => {
 }
 
 aceitarResposta = () => {
-    aceitandoRespostas = true
+    
     if(opcao1.checked === true) {
+        aceitandoRespostas = true
         novaPergunta()
     }
     if(opcao2.checked === true) {
+        aceitandoRespostas = true
         novaPergunta()
     }
     if(opcao3.checked === true) {
+        aceitandoRespostas = true
         novaPergunta()
     }
     if(opcao4.checked === true) {
+        aceitandoRespostas = true
         novaPergunta()
     }
 }

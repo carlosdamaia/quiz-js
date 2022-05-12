@@ -1,0 +1,10 @@
+div.escolhas {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+
+    .esteira-escolhas {
+        margin-right: 2%;
+    }
+}

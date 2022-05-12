@@ -193,6 +193,24 @@ header {
   }
 }
 
+div.escolhas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.escolhas .esteira-escolhas {
+  margin-right: 2%;
+}
+
 .end-form-container {
   width: 100%;
   display: -webkit-box;
