@@ -9,12 +9,14 @@ const opcao2 = document.querySelector('#opcao-2'); // Opção radio
 const opcao3 = document.querySelector('#opcao-3'); // Opção radio
 const opcao4 = document.querySelector('#opcao-4'); // Opção radio
 const proximoBtn = document.querySelector('#proximo-btn'); // Botão próximo
+const escolhas = document.getElementsByName('caixa')
 
 let perguntaAtual = {} // Lista
 let aceitandoRespostas = true
 let pontuacao = 0
 let contadorPerguntas = 0
 let perguntasDisponiveis = [] // Array
+var checkado = false
 
 let perguntas = [
     {
@@ -208,21 +210,15 @@ stopDefault = () => {
     });
 }
 
+ifChecked = () => {
+    for(let x = 0; x < MAX_PERGUNTAS; x++) {
+        checkado = true;
+        proximoBtn.removeAttribute("disabled");
+    } 
+}
+
 aceitarResposta = () => {
-    
-    if(opcao1.checked === true) {
-        aceitandoRespostas = true
-        novaPergunta()
-    }
-    if(opcao2.checked === true) {
-        aceitandoRespostas = true
-        novaPergunta()
-    }
-    if(opcao3.checked === true) {
-        aceitandoRespostas = true
-        novaPergunta()
-    }
-    if(opcao4.checked === true) {
+    if(checkado === true){
         aceitandoRespostas = true
         novaPergunta()
     }
@@ -238,12 +234,12 @@ enableDisable = () => {
 
 novaPergunta = () => {
 
+    proximoBtn.setAttribute("disabled", "disabled")
+    checkado = false;
+    for(let i = 0; i < escolhas.length; i++) {
+        escolhas[i].checked = false;
+    }
     aceitandoRespostas = false
-
-    opcao1.checked = false;
-    opcao2.checked = false;
-    opcao3.checked = false;
-    opcao4.checked = false;
 
     if(perguntasDisponiveis.length === 0 || contadorPerguntas > MAX_PERGUNTAS) {
         console.log('Fim do Jogo')
