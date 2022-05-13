@@ -3,11 +3,6 @@ const choices = Array.from(document.querySelectorAll('.choice-text')); // Array 
 const progressText = document.querySelector('#progressText'); // Perguntas/Total de perguntas
 const scoreText = document.querySelector('#score'); // Pontuação
 const progressBarFull = document.querySelector('#progressBarFull'); // Barra de progresso
-const opcao = Array.from(document.querySelectorAll('.opcao'));
-const opcao1 = document.querySelector('#opcao-1'); // Opção radio
-const opcao2 = document.querySelector('#opcao-2'); // Opção radio
-const opcao3 = document.querySelector('#opcao-3'); // Opção radio
-const opcao4 = document.querySelector('#opcao-4'); // Opção radio
 const proximoBtn = document.querySelector('#proximo-btn'); // Botão próximo
 const escolhas = document.getElementsByName('caixa')
 
@@ -222,14 +217,6 @@ aceitarResposta = () => {
         aceitandoRespostas = true
         novaPergunta()
     }
-}
-
-enableDisable = () => {
-    /*proximoBtn.disabled = !opcao1.checked
-    proximoBtn.disabled = !opcao2.checked
-    proximoBtn.disabled = !opcao3.checked
-    proximoBtn.disabled = !opcao4.checked*/
-    console.log(opcao)
 }
 
 novaPergunta = () => {

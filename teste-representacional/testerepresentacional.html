@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Teste: Perfil Representacional</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <link href="/teste-representacional/testerepresentacional.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <!--
+        <%
+            Statement statement = null;
+            ResultSet result = null;
+        %>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../../paginas/aluno/areaAluno.jsp"> <img id="logoStackX" src="../../img/stackx50.png"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../../paginas/aluno/areaAluno.jsp">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <span>
+                        <small class="mr-1">
+                            <%
+                                String nomeUsuario = (String) session.getAttribute("nomeUsuario");
+                                int idUsuario = (int) session.getAttribute("idUsuario");
+
+                                out.println(nomeUsuario);
+
+                                if (nomeUsuario == null) {
+                                    response.sendRedirect("../../paginas/aluno/loginAluno.jsp");
+                                }
+                            %>
+                        </small>
+                    </span>
+                    <a href="logout.jsp">  <i class="fas fa-sign-out-alt ml-1"></i> </a>
+                </form>
+            </div>
+        </nav>
+
+        <form class="container areaPerguntas" method="POST"><br>
+
+            <legend class="h3">Perfil Representacional</legend>
+            <label for="formGroupExampleInput" class="form-label">Responda conforme este modelo: <br> Exemplo: Entre 1 a 4, qual seria o número que representa melhor você para a opção (A), (B), (C) e (D)? <br> A resposta tem que ser um número para cada letra, por exemplo: 1324 (nunca repetindo os numero)</label>
+            <div class="border border-dark rounded pl-3 pr-3 pt-3">
+                -->
+                
+                <!--QUESTAO 02-->
+                <!--
+                <div class="mb-3  container-sm">
+
+                    <h5>Q1. Eu tomo decisões importantes baseado em: </h5>
+
+                    <p>a. Intuição</p>
+
+                    <div class="form-check form-check-inline ">
+                        <label><input class="form-check-input " type="radio" name="prq1a" value="1" >1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1a" value="2">2</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1a" value="3">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1a" value="4">4</label>
+                    </div>
+
+                    <p>b. O que me soa melhor</p>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input " type="radio" name="prq1b" value="1" >1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1b" value="2">2</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1b" value="3">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1b" value="4">4</label>
+                    </div>
+
+                    <p>c. O que me parece melhor</p>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input " type="radio" name="prq1c" value="1" >1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1c" value="2">2</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1c" value="3">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1c" value="4">4</label>
+                    </div>
+
+                    <p>d. Um estudo preciso e minucioso do assunto.</p>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input " type="radio" name="prq1d" value="1" >1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1d" value="2">2</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1d" value="3">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <label><input class="form-check-input" type="radio" name="prq1d" value="4">4</label>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!--QUESTAO 02-->
+                <!--
+                <div class="mb-3 container-sm">
+
+                    <h5>Q2. Durante uma discussão eu sou mais influenciado por: </h5>
+                    <p>a. Tom de voz da outra pessoa</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq2a" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2a" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2a" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2a" value="4">
+                    </div>
+
+                    <p>b. Se eu posso ou não ver o argumento da outra pessoa</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq2b" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2b" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2b" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2b" value="4">
+                    </div>
+
+                    <p>c. A lógica do argumento da outra pessoa</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq2c" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2c" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2c" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2c" value="4">
+                    </div>
+
+                    <p>d. se eu entro em contato ou não com os sentimentos reais do outro.</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq2d" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2d" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2d" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq2d" value="4">
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!--QUESTAO 03-->
+                <!--
+                <div class="mb-3 container-sm ">
+
+                    <h5>Q3. Eu comunico mais facilmente o que se passa comigo: </h5>
+                    <p>a. Do modo como me visto e aparento </p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq3a" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3a" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3a" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3a" value="4">
+                    </div>
+
+                    <p>b. pelos sentimentos que compartilho</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq3b" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3b" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3b" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3b" value="4">
+                    </div>
+
+                    <p>c. pelas palavras que escolho</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq3c" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3c" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3c" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3c" value="4">
+                    </div>
+
+                    <p>d. pelo tom da minha voz.</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq3d" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3d" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3d" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq3d" value="4">
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!--QUESTAO 04-->
+                <!--
+                <div class="mb-3 container-sm ">
+
+                    <h5>Q4. É muito fácil para mim: </h5>
+                    <p>a. Achar o volume e a sintonia ideais num sistema de som </p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq4a" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4a" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4a" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4a" value="4">
+                    </div>
+
+                    <p>b. Selecionar o ponto mais relevante relativo a um assunto interessante</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq4b" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4b" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4b" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4b" value="4">
+                    </div>
+
+                    <p>c. Escolher os móveis mais confortáveis</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq4c" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4c" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4c" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4c" value="4">
+                    </div>
+
+                    <p>d. Escolher as combinações de cores mais ricas e atraentes.</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq4d" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4d" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4d" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq4d" value="4">
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!--QUESTAO 05-->
+                <!--
+                <div class="mb-3 container-sm ">
+
+                    <h5>Q5. Eu me percebo assim: </h5>
+                    <p>a. Se estou muito em sintonia com os sons do ambiente </p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq5a" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5a" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5a" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5a" value="4">
+                    </div>
+
+                    <p>b. Se sou muito capaz de raciocinar com fatos e dados novos</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq5b" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5b" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5b" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5b" value="4">
+                    </div>
+
+                    <p>c. Eu sou muito sensível à maneira como a roupa veste o meu corpo</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq5c" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5c" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5c" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5c" value="4">
+                    </div>
+
+                    <p>d. Eu respondo fortemente às cores e à aparência de uma sala.</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input " type="radio" name="prq5d" value="1" >
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5d" value="2">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5d" value="3">
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prq5d" value="4">
+                    </div>
+
+                </div>
+
+            </div>
+            <button type="submit" class="btn-sm btn-danger mt-3 mb-3" name="bntEnviar">Enviar Teste</button>
+
+        </form>
+
+        <!-- INSERT NO BANCO VERIFICAR ****************-->
+        <!--
+        <%
+            int v1, a1, c1, d1;
+            int v2, a2, c2, d2;
+            int v3, a3, c3, d3;
+            int v4, a4, c4, d4;
+            int v5, a5, c5, d5;
+
+            if (request.getParameter("bntEnviar") != null) {
+
+                String prq1a = request.getParameter("prq1a");
+                String prq1b = request.getParameter("prq1b");
+                String prq1c = request.getParameter("prq1c");
+                String prq1d = request.getParameter("prq1d");
+
+                String prq2a = request.getParameter("prq2a");
+                String prq2b = request.getParameter("prq2b");
+                String prq2c = request.getParameter("prq2c");
+                String prq2d = request.getParameter("prq2d");
+
+                String prq3a = request.getParameter("prq3a");
+                String prq3b = request.getParameter("prq3b");
+                String prq3c = request.getParameter("prq3c");
+                String prq3d = request.getParameter("prq3d");
+
+                String prq4a = request.getParameter("prq4a");
+                String prq4b = request.getParameter("prq4b");
+                String prq4c = request.getParameter("prq4c");
+                String prq4d = request.getParameter("prq4d");
+
+                String prq5a = request.getParameter("prq5a");
+                String prq5b = request.getParameter("prq5b");
+                String prq5c = request.getParameter("prq5c");
+                String prq5d = request.getParameter("prq5d");
+
+                /*CONVERTER*/
+                int cprq1a = Integer.parseInt(prq1a);
+                c1 = cprq1a;
+                int cprq1b = Integer.parseInt(prq1b);
+                a1 = cprq1b;
+                int cprq1c = Integer.parseInt(prq1c);
+                v1 = cprq1c;
+                int cprq1d = Integer.parseInt(prq1d);
+                d1 = cprq1d;
+
+                int cprq2a = Integer.parseInt(prq2a);
+                a2 = cprq2a;
+                int cprq2b = Integer.parseInt(prq2b);
+                v2 = cprq2b;
+                int cprq2c = Integer.parseInt(prq2c);
+                d2 = cprq2c;
+                int cprq2d = Integer.parseInt(prq2d);
+                c2 = cprq2d;
+
+                int cprq3a = Integer.parseInt(prq3a);
+                v3 = cprq3a;
+                int cprq3b = Integer.parseInt(prq3b);
+                c3 = cprq3b;
+                int cprq3c = Integer.parseInt(prq3c);
+                d3 = cprq3c;
+                int cprq3d = Integer.parseInt(prq3d);
+                a3 = cprq3d;
+
+                int cprq4a = Integer.parseInt(prq4a);
+                a4 = cprq4a;
+                int cprq4b = Integer.parseInt(prq4b);
+                d4 = cprq4b;
+                int cprq4c = Integer.parseInt(prq4c);
+                c4 = cprq4c;
+                int cprq4d = Integer.parseInt(prq4d);
+                v4 = cprq4d;
+
+                int cprq5a = Integer.parseInt(prq5a);
+                a5 = cprq5a;
+                int cprq5b = Integer.parseInt(prq5b);
+                d5 = cprq5b;
+                int cprq5c = Integer.parseInt(prq5c);
+                c5 = cprq5c;
+                int cprq5d = Integer.parseInt(prq5d);
+                v5 = cprq5d;
+
+                int totalV = v1 + v2 + v3 + v4 + v5;
+                int totalC = c1 + c2 + c3 + c4 + c5;
+                int totalA = a1 + a2 + a3 + a4 + a5;
+                int totalD = d1 + d2 + d3 + d4 + d5;
+
+                //(((perguntas - acertos) / perguntas) * 100) + "%"); 
+                //double percV = totalV*100/20;
+                //double percV = ((20-totalV)/20) * 100;
+                //double percC = ((20-totalC)/20) * 100;
+                //double percA = ((20-totalA)/20) * 100;
+                //double percD = ((20-totalD)/20) * 100;
+                //double percD = totalD*100/20;
+                //double percD = (totalD/20)*100;
+                try {
+
+                    statement = new Conexao().conectar().createStatement();
+                    statement.executeUpdate("INSERT INTO perfilRepresentacional (idAluno, prq1a, prq1b, prq1c,prq1d,prq2a,prq2b,prq2c,prq2d,prq3a,prq3b,prq3c,prq3d,prq4a,prq4b,prq4c,prq4d,prq5a,prq5b,prq5c,prq5d,v,c,a,d) VALUES ('" + idUsuario + "','" + cprq1a + "','" + cprq1b + "','" + cprq1c + "','" + cprq1d + "','" + cprq2a + "','" + cprq2b + "','" + cprq2c + "','" + cprq2d + "','" + cprq3a + "','" + cprq3b + "','" + cprq3c + "','" + cprq3d + "','" + cprq4a + "','" + cprq4b + "','" + cprq4c + "','" + cprq4d + "','" + cprq5a + "','" + cprq5b + "','" + cprq5c + "','" + cprq5d + "','" + totalV + "','" + totalC + "','" + totalA + "','" + totalD + "')");
+                    statement.executeUpdate("UPDATE Alunos SET perfilRepresentacional = 'S' WHERE idAluno = '" + idUsuario + "'");
+                    response.sendRedirect("../../paginas/aluno/areaAluno.jsp");
+                    //out.println("Incluido com sucesso");
+
+                } catch (Exception e) {
+                    //out.print(e);
+                    e.printStackTrace();
+                }
+            }
+        %>
+        -->
+        
+        <header>
+            <a href="/logout.jsp" class="botoes-header">Voltar</a>
+            <a href="/logout.jsp" class="botoes-header">Sair</a>
+        </header>
+        <div class="container">
+            <div id="game" class="justify-center flex-column">
+                <div id="hud">
+                    <div class="hud-item">
+                        <p id="progressText" class="hud-prefix">
+                            Questão
+                        </p>
+                    </div>
+                </div>
+        
+                <form>
+                        <h1 id="question">Qual é a resposta para essa pergunta?</h1>
+                        <div class="choice-container">
+                            <label class="choice-text" data-number="1" for="opcao-1">Escolha</label>
+                            <div class="opcoes">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                            </div>
+                        </div>
+                        <div class="choice-container">
+                            <label class="choice-text" data-number="2" for="opcao-2">Escolha</label>
+                            <div class="opcoes">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                            </div>
+                        </div>
+                        <div class="choice-container">
+                            <label class="choice-text" data-number="3" for="opcao-3">Escolha</label>
+                            <div class="opcoes">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                            </div>
+                        </div>
+                        <div class="choice-container">
+                            <label class="choice-text" data-number="4" for="opcao-4">Escolha</label>
+                            <div class="opcoes">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                                <input class="esteira-escolhas" name="caixa" type="radio" onclick="ifChecked()">
+                            </div>
+                        </div>
+                        <div class="instrucoes">
+                            <h2>Responda conforme este modelo:</h2>
+                            <p>Exemplo: Entre 1 a 4, qual seria o número que representa melhor você para a opção (A), (B), (C) e (D)?</p>
+                            <p>A resposta tem que ser um número para cada letra, por exemplo: 1324 (nunca repetindo os numero)</p>
+                        </div>
+                <form>
+                    <div class="proximo">
+                        <button id="proximo-btn" disabled="true" onclick="aceitarResposta()">Próximo</button>
+                    </div>
+            </div>
+            </div>
+        
+            <script src="/teste-representacional/testeRepresentacional.js"></script>
+    </body>
+</html>

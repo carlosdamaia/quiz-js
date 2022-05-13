@@ -1,4 +1,4 @@
-const question = document.querySelector('#question'); // Pergunta
+/*const question = document.querySelector('#question'); // Pergunta
 const choices = Array.from(document.querySelectorAll('.choice-text')); // Array das opções de resposta.
 const progressText = document.querySelector('#progressText'); // Perguntas/Total de perguntas
 const scoreText = document.querySelector('#score'); // Pontuação
